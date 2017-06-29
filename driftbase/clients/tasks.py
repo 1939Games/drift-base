@@ -37,7 +37,8 @@ def update_online_statistics():
         with sqlalchemy_session(this_conn_string) as session:
             result = session.execute("""SELECT COUNT(DISTINCT(player_id)) AS cnt
                                           FROM ck_clients
-                                         WHERE heartbeat > NOW() - INTERVAL '1 minutes'""")
+                                         WHERE status = 'active' AND 
+                                               heartbeat > NOW() - INTERVAL '1 minutes'""")
             cnt = result.fetchone()[0]
             if cnt:
                 num_updated += 1
