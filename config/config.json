@@ -21,6 +21,7 @@
         "drift.contrib.apps.servicestatus"
     ],
     "extensions": [
+        "driftbase.extensions.sentry"
     ],
     "models": [
         "driftbase.db.models"
@@ -87,5 +88,6 @@
     "CELERY_RESULT_SERIALIZER": "json",
     "CELERY_STORE_ERRORS_EVEN_IF_IGNORED": true,
     "CELERY_TASK_RESULT_EXPIRES": 3600,
-    "CELERY_TASK_SERIALIZER": "json"
+    "CELERY_TASK_SERIALIZER": "json",
+    "SENTRY_DSN": "https://ac8e28ce76b241b3845f9e98586671fc:b9ad1248f96f4c1598a2311e0b4bd871@sentry.io/186917"
 }
