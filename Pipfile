@@ -16,6 +16,7 @@ marshmallow = "*"
 marshmallow-sqlalchemy = "*"
 flask-marshmallow = "*"
 flask-smorest = "*"
+python-decouple = "*"
 
 [dev-packages]
 pytest = "*"
